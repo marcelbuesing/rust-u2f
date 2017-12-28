@@ -3,10 +3,10 @@ Maintainer: Daniel Stiner <daniel.stiner@gmail.com>
 Section: misc
 Priority: optional
 Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 9)
+Build-Depends: systemd, libsystemd-dev, debhelper (>= 9)
 
 Package: u2f-hidraw-policy
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: systemd, ${shlibs:Depends}, ${misc:Depends}
 Description: u2f-hidraw-policy is a udev helper that detects U2F HID tokens as described by the U2F spec.
 
