@@ -1,10 +1,15 @@
-sudo: required
+sudo: false
+language: rust
+rust:
+  - stable
+  - beta
+  - nightly
 
-services:
-  - docker
-
-before_install:
-- docker build -t danstiner/softu2f-linux .
-
-script:
-- docker run -t danstiner/softu2f-linux cargo test --all
+matrix:
+  allow_failures:
+    - rust: nightly
+    
+addons:
+  apt:
+    packages:
+      - libdbus-1-dev libssl-dev libsystemd-dev protobuf-compiler
