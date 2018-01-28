@@ -1,5 +1,6 @@
 sudo: false
 language: rust
+cache: cargo
 rust:
   - stable
   - beta
@@ -8,7 +9,7 @@ rust:
 matrix:
   allow_failures:
     - rust: nightly
-    
+
 addons:
   apt:
     packages:
