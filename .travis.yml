@@ -13,4 +13,4 @@ matrix:
 addons:
   apt:
     packages:
-      - libdbus-1-dev libssl-dev libsystemd-daemon-dev protobuf-compiler
+      - libdbus-1-dev libssl-dev systemd libsystemd-daemon-dev protobuf-compiler
